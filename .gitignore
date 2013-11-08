@@ -18,3 +18,4 @@
 # Boilerplate, ignore uploads and env yaml config.
 /public/uploads
 /config/env.yml
+.DS_Store
