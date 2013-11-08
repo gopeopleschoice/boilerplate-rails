@@ -1,0 +1,6 @@
+// Todo: Refactor if-inverse statement
+if($("#new_session_modal").length){
+} else {
+  $('body').append('<%= j render "sessions/new" %>');
+}
+$('#new_session_modal').modal('toggle');

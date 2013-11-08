@@ -1,0 +1,12 @@
+<% if session[:user_id] %>
+  // Bind remove to the hidden action.
+  $('#new_session_modal').on('hidden.bs.modal', function () {
+    $('#new_session_modal').remove();
+  })
+  // Hide/remove() modal.
+  $('#new_session_modal').modal('toggle');
+<% else %>
+  $('#new_session_modal .modal-body .notifications').html('<%= j render "layouts/notifications" %>');
+  // Render the form again to product errors.
+  $('#new_session').replaceWith('<%= j render "form" %>');
+<% end %>

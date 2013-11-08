@@ -1,0 +1,12 @@
+// Refurns false if there is a new record... weird...
+<% if @user.new_record? %>
+  // Render the form again to product errors.
+  $('#new_user').replaceWith('<%= j render "form" %>');
+<% else %>
+  // Bind remove to the hidden action.
+  $('#new_user_modal').on('hidden.bs.modal', function () {
+    $('#new_user_modal').remove();
+  })
+  // Hide/remove() modal.
+  $('#new_user_modal').modal('toggle');
+<% end %>

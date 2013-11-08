@@ -1,0 +1,6 @@
+// Todo: Refactor if-inverse statement
+if($("#new_user_modal").length){
+} else {
+  $('body').append('<%= j render "users/new" %>');
+}
+$('#new_user_modal').modal('toggle');

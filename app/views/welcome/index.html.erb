@@ -1,0 +1,7 @@
+<h1>Welcome to boilerplate-rails</h1>
+<% if current_user %>
+  <%= li_active_link_to "#{icon_tag 'signout icon-fixed-width'} Sign out".html_safe, signout_path %>
+<% else %>
+  <%= li_active_link_to "Register", signup_path, remote: true %>
+  <%= li_active_link_to "Sign in", signin_path, remote: true %>
+<% end %>

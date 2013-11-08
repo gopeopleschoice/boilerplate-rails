@@ -1,0 +1,8 @@
+<%= form_tag sessions_path, class: "form-login" do %>
+  <h2 class="form-login-heading"><%= t(".page_title") %></h2>
+  <%= text_field_tag :email, params[:email], class: "form-control", placeholder: "Email address" %>
+  <%= password_field_tag :password, nil, class: "form-control", placeholder: "Password" %>
+  <%= submit_tag "Sign in", class: "btn btn-lg btn-primary btn-block" %>
+  <p class="text-center">Don't have an account?</p>
+  <p class="text-center"><%= link_to "Sign up", signup_path, class: "btn btn-lg btn-default btn-block" %></p>
+<% end %>
